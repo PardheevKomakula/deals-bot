@@ -8,16 +8,16 @@ from keep_alive import keep_alive  # <--- CRITICAL IMPORT
 API_ID = 30367926
 API_HASH = '3f846e3ad96fcc9dc7c4121cc94a1542'
 
-# 1. SESSION STRING
-STRING_SESSION = '1BVtsOHsBuwmPNJ-CdahXCEYNyC1Bhn6QX3kvm0OY4YpsP1auf70y3OLdbZ6YNkU8iIgzjeV0viyzk5_qlyzNhM9h8vjwiUcAlTdl1IbdKtiS2vz_PIf2XMtKKmdk1uC_J6U-FhxkoAmSJEH2lZbVIVA8h7Mvdv8-nP2omQzdfET2xsAq8PVqKr2Kv8fHPvWd2Ohn6e_Vzk1wXAWFDKcwSONJyUgYlA1NZkrqx2-dQ9oY7T4qysp0h44_rZV7ivWkyoa2jaCSAqjZoKAvZpHctxD5ibpT6ZZZ8AJUQqS2Tv8AX25TeXqZAmP-hBLO_d2aE9viovk6yTbvP9p6EdgHMxmDU0Q7pwM=-r-5q-dj8QLfMDpcYxIDV3SyAEUDhY1vAOtFL010G3IBSLJhQiqb6cP0UJmwn6JI0Oh8_x4c_Izap8U0vqgvUtAsLsJPfb_U7Ax5J1UqI_osRlfS8='
+# 1. SESSION STRING (I inserted the CLEAN one you provided)
+STRING_SESSION = '1BVtsOHsBu7wUxFUcqrXfEX58GOrBdVlNqyiIXynUAkqwdvRJyKtDgWVXW7U7ABCOtd0CI6PhTCx0bjCwuI2oUkGakafbDlkxvdhtVCW5CNSQ6z7pgeZpg-4OttAwinGD5qvJ1vtc3z10Q72Gz1h_g-De0HF_MvefNOUEpCRumH-rnNB-IfowpQwBNmgyC6PSFarLjoNG3iUs1f_PhUvAbNNHo-TIwPAFqjp8oyecDU7SkKkzYjkpSaCmfi30bxq4rmBx453QL1_SBcNFE7_CD9B5UqZGiuFPxGf9WxOfhrBiOdpwzoCz9o_DPi2VjclgktOce1C5vN1zEDRsKoNfZI2cOuDNWKQ='
 
 # 2. CHANNELS TO SPY ON
 SOURCE_CHANNELS = [
-    -1002486045463, 
-    -1001886505541, 
-    '@Mens_fashion_only', 
-    -1001331753715, 
-    -1001289031146, 
+    -1002486045463,
+    -1001886505541,
+    '@Mens_fashion_only',
+    -1001331753715,
+    -1001289031146,
     -1001559259623
 ]
 
@@ -25,7 +25,7 @@ SOURCE_CHANNELS = [
 MY_CHANNEL = 'deals_store_cheap'
 
 # 4. EXTRAPE BOT USERNAME 
-EXTRAPE_BOT = '@ExtraPeBot' 
+EXTRAPE_BOT = '@ExtraPeBot'
 
 # 5. AMAZON FALLBACK TAG
 AMAZON_TAG = 'pardheev-21'
@@ -43,7 +43,7 @@ async def get_profit_link(original_url):
 
     # B. Slow Path: Flipkart/Myntra (Ask the Bot)
     try:
-        async with client.conversation(EXTRAPE_BOT, timeout=20) as conv: 
+        async with client.conversation(EXTRAPE_BOT, timeout=20) as conv:
             await conv.send_message(original_url)
             response = await conv.get_response()
             
@@ -91,9 +91,9 @@ async def handler(event):
         
     new_caption = msg_text.replace(target_link, final_link)
     footer = (
-    "\n\n🚀 **Join @deals_store_cheap**"
-    "\n🔍 **Looking for something?** DM me: @Pardhu130806"
-)
+        "\n\n🚀 **Join @deals_store_cheap**"
+        "\n🔍 **Looking for something?** DM me: @Pardhu130806"
+    )
     
     # HANDLE MEDIA (Safe Mode)
     media_to_send = None
@@ -116,9 +116,8 @@ print("🕵️ Deal Mirror is Active...")
 
 # --- KEEP ALIVE SERVER ---
 # Remove '#' below when deploying to Render
-keep_alive() 
+keep_alive()
 # -------------------------
 
 client.start()
 client.run_until_disconnected()
-
