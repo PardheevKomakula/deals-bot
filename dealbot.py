@@ -90,7 +90,10 @@ async def handler(event):
         print("⚠️ Posting original link (Conversion skipped)")
         
     new_caption = msg_text.replace(target_link, final_link)
-    footer = "\n\n🚀 **Join @deals_store_cheap**"
+    footer = (
+    "\n\n🚀 **Join @deals_store_cheap**"
+    "\n🔍 **Looking for something?** DM me: @Pardhu130806"
+)
     
     # HANDLE MEDIA (Safe Mode)
     media_to_send = None
